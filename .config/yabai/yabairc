@@ -19,9 +19,8 @@ yabai -m rule --add label="safari" app="Safari" space=^2
 yabai -m rule --add label="settings" app="System Settings" space=^1
 
 # sketchybar events
-# yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
-# yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
-yabai -m signal --add event=space_changed action="sketchybar -m --trigger title_change &> /dev/null"
+yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
+yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
 
 # status bar settings
 yabai -m config external_bar all:0:25
