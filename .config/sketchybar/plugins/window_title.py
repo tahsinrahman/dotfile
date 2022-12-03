@@ -4,7 +4,7 @@ import subprocess
 import json
 
 all_apps_cmd = '''
-yabai -m query --windows --space | jq '.[] | {app: .app, pid: .pid, index: ."stack-index"}' | jq -s 'sort_by(.index)'
+yabai -m query --windows --space | jq '.[] | {app: .app, pid: .pid, index: ."stack-index", sticky: ."is-sticky"} | select(.sticky == false)' | jq -s 'sort_by(.index)'
 '''
 apps = subprocess.run(all_apps_cmd, capture_output=True, shell=True, text=True).stdout
 apps = json.loads(apps)
