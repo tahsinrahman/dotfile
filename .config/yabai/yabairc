@@ -17,6 +17,8 @@ yabai -m rule --add label="spotify" app="Spotify" space=^1
 yabai -m rule --add label="mail" app="Mail" space=^1
 yabai -m rule --add label="safari" app="Safari" space=^2
 yabai -m rule --add label="settings" app="System Settings" space=^1
+yabai -m rule --add label="outlook" app="Microsoft Outlook" space=^1
+yabai -m rule --add label="teams" app="Microsoft Teams" space=^1
 
 # sketchybar events
 yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
